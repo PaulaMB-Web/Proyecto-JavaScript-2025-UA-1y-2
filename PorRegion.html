@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda de Paises por región</title>
+    <script src="JS/PorRegion.js"></script>
+</head>
+<h1>Consulta de Países por Región</h1>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="PorNombre.html">Busqueda de paises por nombre</a></li>
+            <li><a href="PorRegion.html">Busqueda de paises por región</a></li>
+        </ul>
+    </nav>
+
+
+
+  
+
+    <label for="region">Selecciona una región:</label>
+    <select id="region">
+        <option value="africa">África</option>
+        <option value="americas">América</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europa</option>
+        <option value="oceania">Oceanía</option>
+    </select>
+    <button onclick="buscarPorRegion()">Buscar</button>
+
+    <div id="resultado"></div>
+
+
+</body>
+</html>
