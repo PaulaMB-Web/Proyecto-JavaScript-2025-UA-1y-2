@@ -1,0 +1,158 @@
+/* Estilos generales para dispositivos móviles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Azul claro de fondo */
+    color: #333; /* Texto oscuro para contrastar con el fondo */
+}
+
+h1 {
+    text-align: center;
+    color: #00796b; /* Verde suave para el título */
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Navegación */
+nav {
+    background-color: #e0f7fa; /* Fondo azul muy claro */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #00796b; /* Verde oscuro para los enlaces */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #004d40; /* Verde más oscuro al pasar el ratón */
+}
+
+/* Estilo para el formulario de búsqueda */
+#btnpais {
+    width: 80%;
+    padding: 12px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid #b2dfdb; /* Bordes suaves */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+button {
+    background-color: #80deea; /* Azul suave para el botón */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: #4dd0e1; /* Azul más brillante al pasar el ratón */
+}
+
+/* Resultados */
+#resultado {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#resultado h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #00796b; /* Verde oscuro para los títulos */
+}
+
+#resultado p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555; /* Texto gris suave */
+}
+
+#resultado img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Media query para pantallas más grandes (tabletas, escritorios) */
+@media (min-width: 600px) {
+    #btnpais {
+        width: 50%;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+
+    #resultado {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    #resultado h2 {
+        font-size: 24px;
+    }
+
+    #resultado p {
+        font-size: 16px;
+    }
+
+    #resultado img {
+        width: 120px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Aún más ajustes para pantallas grandes (escritorios grandes) */
+    #btnpais {
+        width: 40%;
+    }
+
+    button {
+        padding: 15px 40px;
+        font-size: 20px;
+    }
+
+    #resultado {
+        width: 60%;
+        max-width: 800px;
+    }
+
+    #resultado h2 {
+        font-size: 28px;
+    }
+
+    #resultado p {
+        font-size: 18px;
+    }
+
+    #resultado img {
+        width: 150px;
+    }
+}
