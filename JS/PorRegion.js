@@ -23,12 +23,19 @@ function renderizarPaises() {
         const card = document.createElement("div");
         card.classList.add("card");
         card.innerHTML = `
-            <h3>${pais.name.common}</h3>
-            <p><strong>Capital:</strong> ${pais.capital ? pais.capital[0] : "No disponible"}</p>
-            <p><strong>Población:</strong> ${pais.population.toLocaleString()} habitantes</p>
-            <img src="${pais.flags.svg}" alt="Bandera de ${pais.name.common}">
+            <h3 style="cursor: pointer;" onclick="mostrarDetalles('${pais.name.common}', '${pais.capital ? pais.capital[0] : "No disponible"}', ${pais.population}, '${pais.region}', '${pais.flags.svg}')">${pais.name.common}</h3>
         `;
         resultado.appendChild(card);
     });
 }
 
+function mostrarDetalles(nombre, capital, poblacion, continente, bandera) {
+    document.getElementById('modalNombre').innerText = `Nombre: ${nombre}`;
+    document.getElementById('modalCapital').innerText = `Capital: ${capital}`;
+    document.getElementById('modalPoblacion').innerText = `Población: ${poblacion.toLocaleString()} habitantes`;
+    document.getElementById('modalContinente').innerText = `Continente: ${continente}`;
+    document.getElementById('modalBandera').src = bandera;
+
+    // Mostrar el modal
+    $('#tareaModal').modal('show');
+}

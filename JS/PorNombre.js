@@ -30,7 +30,7 @@ function mostrarDatos(pais) {
         <p><strong>Capital:</strong> ${pais.capital ? pais.capital[0] : "No disponible"}</p>
         <p><strong>Población:</strong> ${pais.population.toLocaleString()} habitantes</p>
         <p><strong>Región:</strong> ${pais.region}</p>
-        <img src="${pais.flags.svg}" alt="Bandera de ${pais.name.common}">
+        <img src="${pais.flags.svg}" alt="Bandera de ${pais.name.common}" class="bandera">
     `;
 }
 
