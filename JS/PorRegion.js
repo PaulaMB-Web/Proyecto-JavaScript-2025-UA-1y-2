@@ -11,7 +11,7 @@ async function buscarPorRegion() {
         datosPaises = await response.json();
         renderizarPaises();
     } catch (error) {
-        document.getElementById("resultado").innerHTML = `<p style="color: red;">${error.message}</p>`;
+        document.getElementById("resultado").innerHTML = `${error.message}`;
     }
 }
 
@@ -20,15 +20,15 @@ function renderizarPaises() {
     resultado.innerHTML = ""; 
 
     datosPaises.forEach(pais => {
-        const card = document.createElement("div");
-        card.classList.add("card");
+        const card = document.createElement("div");//se crea div para mostrar la informacion
+        card.classList.add("card");//agrega una clase card (css)
         card.innerHTML = `
             <h3 style="cursor: pointer;" onclick="mostrarDetalles('${pais.name.common}', '${pais.capital ? pais.capital[0] : "No disponible"}', ${pais.population}, '${pais.region}', '${pais.flags.svg}')">${pais.name.common}</h3>
         `;
         resultado.appendChild(card);
     });
 }
-
+//actualiza el modal
 function mostrarDetalles(nombre, capital, poblacion, continente, bandera) {
     document.getElementById('modalNombre').innerText = `Nombre: ${nombre}`;
     document.getElementById('modalCapital').innerText = `Capital: ${capital}`;

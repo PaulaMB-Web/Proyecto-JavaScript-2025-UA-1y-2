@@ -1,5 +1,5 @@
 function buscarPais() {
-    const nombrePais = document.getElementById("btnpais").value.trim();
+    const nombrePais = document.getElementById("btnpais").value.trim();//elimina espacios en blanco
 
     if (nombrePais === "") {
         alert("Por favor, ingresa un país.");
@@ -19,7 +19,7 @@ function buscarPais() {
             mostrarDatos(data[0]);
         })
         .catch(error => {
-            document.getElementById("resultado").innerHTML = `<p style="color: red;">${error.message}</p>`;
+            document.getElementById("resultado").innerHTML = `${error.message}`;
         });
 }
 
